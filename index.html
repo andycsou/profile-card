@@ -10,11 +10,21 @@
     integrity="sha512-YWzhKL2whUzgiheMoBFwW8CKV4qpHQAEuvilg9FAn5VJUDwKZZxkJNuGM4XkWuk94WCrrwslk8yWNGmY1EduTA=="
     crossorigin="anonymous"
     referrerpolicy="no-referrer"/>
-
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r134/three.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vanta@latest/dist/vanta.clouds.min.js"></script>
     <script>
         window.addEventListener('DOMContentLoaded', () => {
+
+            VANTA.CLOUDS({
+                el: "#vanta",
+                mouseControls: true,
+                touchControls: true,
+                gyroControls: false,
+                minHeight: 200.00,
+                minWidth: 200.00
+            })
             setTimeout(() => {
-                const main = document.querySelector('body')
+                const main = document.querySelector('main')
                 main.style.opacity = 1
                 main.style.filter = 'blur(0px)'
             }, 1000)
@@ -23,47 +33,49 @@
     
 </head>
 <body>
-    <div class="card">
-        <div class="card_img">
-            <img src="me.jpg" alt="">
+    <div id="vanta"></div>
+    <main class="animated">
+        <div class="card">
+            <div class="card_img">
+                <img src="me.jpg" alt="">
+            </div>
+            <h2>Nguyễn Ngọc Thiên Ân</h2>
+            <p>Backend Developer</p>
+            <div class="card_social">
+                <a href="https://www.facebook.com/anantuongcong" target="_blank">
+                    <i class="fab fa-facebook-f"></i>
+                </a>
+                <a href="https://t.me/andycsou" target="_blank">
+                    <i class="fab fa-telegram"></i>
+                </a>
+                <a href="https://github.com/andycsou" target="_blank">
+                    <i class="fab fa-github"></i>
+                </a>
+                <a href="https://www.linkedin.com/in/andycsou/" target="_blank">
+                    <i class="fab fa-linkedin-in"></i>
+                </a>
+            </div>
+            <button onclick="location.href='https://andycsou.github.io/biolink/'">Contact Me</button>
         </div>
-        <h2>Nguyễn Ngọc Thiên Ân</h2>
-        <p>Backend Developer</p>
-        <div class="card_social">
-            <a href="https://www.facebook.com/anantuongcong" target="_blank">
-                <i class="fab fa-facebook-f"></i>
-            </a>
-            <a href="https://t.me/andycsou" target="_blank">
-                <i class="fab fa-telegram"></i>
-            </a>
-            <a href="https://github.com/andycsou" target="_blank">
-                <i class="fab fa-github"></i>
-            </a>
-            <a href="https://www.linkedin.com/in/andycsou/" target="_blank">
-                <i class="fab fa-linkedin-in"></i>
-            </a>
+        
+        <!-- one card -->
+        
+        <div class="card">
+            <div class="card_img">
+                <img src="anvaduy.jpg" alt="">
+            </div>
+            <h2>Ka' Duy</h2>
+            <p>Dental Student</p>
+            <div class="card_social">
+                <a href="https://www.facebook.com/kaduy2212" target="_blank">
+                    <i class="fab fa-facebook-f"></i>
+                </a>
+                <a href="https://www.instagram.com/kd_2212/" target="_blank">
+                    <i class="fab fa-instagram"></i>
+                </a>
+            </div>
+            <button onclick="location.href='https://andycsou.github.io/biolink/kd_2212'">Contact Me</button>
         </div>
-        <button onclick="location.href='https://andycsou.github.io/biolink/'">Contact Me</button>
-    </div>
-
-    <!-- one card -->
-
-    <div class="card">
-        <div class="card_img">
-            <img src="anvaduy.jpg" alt="">
-        </div>
-        <h2>Ka' Duy</h2>
-        <p>Dental Student</p>
-        <div class="card_social">
-            <a href="https://www.facebook.com/kaduy2212" target="_blank">
-                <i class="fab fa-facebook-f"></i>
-            </a>
-            <a href="https://www.instagram.com/kd_2212/" target="_blank">
-                <i class="fab fa-instagram"></i>
-            </a>
-        </div>
-        <button onclick="location.href='https://andycsou.github.io/biolink/kd_2212'">Contact Me</button>
-    </div>
-
+    </main>
 </body>
 </html>
